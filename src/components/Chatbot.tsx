@@ -13,19 +13,13 @@ export function Chatbot() {
   return (
     <div className="h-96 w-full max-w-[700px] ">
       <div className="flex flex-col h-full ">
-        
-        
         <div className="flex-grow rounded-lg border p-4">
-        {messages.map((m, index) => (
-              
+        {messages.map((m, index) => (  
               <p className="whitespace-pre-line" key={index}>
                 {m.content}
                 </p>
             ))}
-
         </div>
-          
-      
         <div className=" flex items-center p-2">
           <form className="flex-1" onSubmit={handleSubmit}>
             <Input placeholder="Type your message here..." value={input} onChange={handleInputChange}  />
