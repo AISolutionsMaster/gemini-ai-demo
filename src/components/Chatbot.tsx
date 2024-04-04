@@ -18,10 +18,16 @@ export function Chatbot() {
     preMessages.forEach((message, index) => {
       setTimeout(() => {
         setInput(message.content);
+        const syntheticEvent = {
+          target: {
+            value: message.content
+          }
+        };
+        handleInputChange(syntheticEvent as React.ChangeEvent<HTMLInputElement>); // Pass synthetic event object
       }, message.delay);
     });
-  }, []); // Ensure this effect runs only once on component mount
-
+  }, []);
+  
   return (
     <div className="h-96 w-full max-w-[700px] ">
       <div className="flex flex-col h-full ">
