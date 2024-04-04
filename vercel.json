@@ -4,8 +4,8 @@
       "source": "/(.*)",
       "headers": [
         {
-          "key": "X-Frame-Options",
-          "value": "ALLOW-FROM https://tech-browser.vercel.app"
+          "key": "Content-Security-Policy",
+          "value": "frame-ancestors https://tech-browser.vercel.app"
         }
       ]
     }
