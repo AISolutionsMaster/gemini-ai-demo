@@ -7,9 +7,9 @@ import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { useChat } from "ai/react";
 
+
 export function Chatbot() {
-  const {messages, input, setInput, handleInputChange, handleSubmit} = useChat();
-  setInput("Who is Ho Chi Minh");
+  const {messages, input, handleInputChange, handleSubmit} = useChat({ initialInput: "who is Ho Chi Minh" });
   return (
     <div className="h-96 w-full max-w-[700px] ">
       <div className="flex flex-col h-full ">
