@@ -6,10 +6,13 @@
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { useChat } from "ai/react";
+import React, { useState } from 'react';
 
 
 export function Chatbot() {
-  const {messages, input, handleInputChange, handleSubmit} = useChat({ initialInput: "who is Ho Chi Minh" });
+  const {messages, handleInputChange, handleSubmit} = useChat({ initialInput: "who is Ho Chi Minh" });
+  const [input, setInput] = useState("who is Ho Chi Minh"); // Pre-fill message
+
   return (
     <div className="h-96 w-full max-w-[700px] ">
       <div className="flex flex-col h-full ">
