@@ -5,7 +5,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "frame-ancestors https://tech-browser.vercel.app"
+          "value": "frame-ancestors https://tech-browser.vercel.app https://buianthai.vercel.app"
         }
       ]
     }
