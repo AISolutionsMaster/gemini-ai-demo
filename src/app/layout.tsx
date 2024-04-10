@@ -5,8 +5,13 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Thao Duong",
-  description: "Welcome to my site",
+  title: "Thao Gemini",
+  description: "Welcome to Thao Gemini",
+  openGraph: {
+    title: 'Thao Gemini',
+    description: '',
+    images: [`https://duongthao.vercel.app/og.svg`],
+  },
 };
 
 export default function RootLayout({
